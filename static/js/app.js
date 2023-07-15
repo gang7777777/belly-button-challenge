@@ -113,8 +113,13 @@ function buildBarChart(sample) {
           orientation: "h"
       };
 
+      // Set up layout
+      let layout = {
+        title: "<b>Top 10 OTUs"
+      }
+
       // Call Plotly to plot the bar chart
-      Plotly.newPlot("bar", [trace])
+      Plotly.newPlot("bar", [trace], layout)
   });
 };
 
@@ -156,9 +161,8 @@ function buildBubbleChart(sample) {
 
       // Set up the layout
       let layout = {
-          // title: "Bacteria Per Sample",
-          hovermode: "closest",
-          xaxis: {title: "OTU ID"},
+          title: "<b>Bacteria Present Per Sample",
+          xaxis: {title: "OTU ID"}
       };
 
       // Call Plotly to plot the bubble chart
