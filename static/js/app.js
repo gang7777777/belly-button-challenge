@@ -18,27 +18,27 @@ function init() {
       let names = data.names;
 
       // Add  samples to dropdown menu
-      names.forEach((id) => {
+      names.forEach((idNumber) => {
 
           // Log the value of id for each iteration of the loop
-          console.log(id);
+          console.log(idNumber);
 
           dropdownMenu.append("option")
-          .text(id)
-          .property("value",id);
+          .text(idNumber)
+          .property("value",idNumber);
       });
 
       // Set the first sample from the list
-      let sample_one = names[0];
+      let sampleInit = names[0];
 
       // Log the value of sample_one
-      console.log(sample_one);
+      console.log(sampleInit);
 
       // Build the initial plots
-      buildMetadata(sample_one);
-      buildBarChart(sample_one);
-      buildBubbleChart(sample_one);
-      buildGaugeChart(sample_one);
+      buildMetadata(sampleInit);
+      buildBarChart(sampleInit);
+      buildBubbleChart(sampleInit);
+      buildGaugeChart(sampleInit);
 
   });
 };
